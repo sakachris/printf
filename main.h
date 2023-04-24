@@ -21,4 +21,6 @@ typedef struct specifier
 int is_char(va_list);
 int is_string(va_list);
 int is_percent(va_list);
+int is_int(va_list);
+int is_decimal(va_list);
 #endif /* _MAIN_H_ */
