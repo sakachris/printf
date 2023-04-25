@@ -2,7 +2,7 @@
 #define MAIN_H
 
 #include <stdarg.h>
-#include <stdio.h>
+#include <limits.h>
 #include <stdlib.h>
 #include <unistd.h>
 
@@ -27,5 +27,9 @@ int is_string(va_list);
 int is_percent(va_list);
 int is_int(va_list);
 int is_decimal(va_list);
+int is_binary(va_list);
+int is_unsign(va_list);
+long int_to_binaty(int num);
+unsigned int to_unsign(unsigned int num);
 
 #endif

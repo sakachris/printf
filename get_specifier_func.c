@@ -13,12 +13,14 @@ int (*get_specifier(const char *format))(va_list)
 		{"%", is_percent},
 		{"i", is_int},
 		{"d", is_decimal},
-		{NULL, NULL},
+		{"b", is_binary},
+		{"u", is_unsign},
+		{NULL, NULL}
 	};
 
 	int b = 0;
 
-	while (b < 5)
+	while (b < 6)
 	{
 		if (*format == *sff[b].sp)
 			return (sff[b].f);
