@@ -1,5 +1,4 @@
 #include "main.h"
-#include <unistd.h>
 
 /**
  * is_int - gets an integer value & prints it
@@ -27,8 +26,8 @@ int is_int(va_list print)
 	while (v1 > 9)
 	{
 		v1 = v1 / 10;
-		j++;
 		v2 = v2 * 10;
+		j++;
 	}
 
 	for (i = 1; i <= j; i++)

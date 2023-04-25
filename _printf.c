@@ -9,13 +9,15 @@
  */
 int _printf(const char *format, ...)
 {
-	int i = 0;
-	int num = 0;
-	int count = 0;
+	int i = 0, num = 0, count = 0;
 	va_list print;
 	int (*function)(va_list);
 
 	va_start(print, format);
+	if (format == NULL)
+	{
+		return (-1);
+	}
 	while (format[i])
 	{
 		if (format[i] != '%')
@@ -45,6 +47,6 @@ int _printf(const char *format, ...)
 			}
 		}
 	}
-
+	va_end(print);
 	return (count);
 }

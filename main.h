@@ -23,4 +23,6 @@ int is_string(va_list);
 int is_percent(va_list);
 int is_int(va_list);
 int is_decimal(va_list);
+int is_binary(va_list);
+long int_to_binary(int num);
 #endif /* _MAIN_H_ */

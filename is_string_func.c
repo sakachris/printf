@@ -14,6 +14,11 @@ int is_string(va_list print)
 
 	str = va_arg(print, char *);
 
+	if (str == NULL)
+	{
+		count = _puts("(null)");
+	}
+
 	if (!str)
 	{
 		return (-1);
