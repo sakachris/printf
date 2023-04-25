@@ -15,12 +15,13 @@ int (*get_specifier(const char *format))(va_list)
 		{"i", is_int},
 		{"d", is_decimal},
 		{"b", is_binary},
+		{"u", is_unsign},
 		{NULL, NULL}
 	};
 
 	int i = 0;
 
-	while (i < 6)
+	while (i < 7)
 	{
 		if (*format == *sf[i].sp)
 		{

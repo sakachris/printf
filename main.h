@@ -2,6 +2,7 @@
 #define _MAIN_H_
 #include <stdarg.h>
 #include <stdlib.h>
+#include <limits.h>
 int _putchar(char c);
 int _puts(const char *str);
 int _printf(const char *format, ...);
@@ -24,5 +25,7 @@ int is_percent(va_list);
 int is_int(va_list);
 int is_decimal(va_list);
 int is_binary(va_list);
+int is_unsign(va_list);
 long int_to_binary(int num);
+unsigned int to_unsign(unsigned int num);
 #endif /* _MAIN_H_ */
