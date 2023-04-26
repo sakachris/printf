@@ -17,6 +17,7 @@ int is_string(va_list print)
 	if (str == NULL)
 	{
 		count = _puts("(null)");
+		return (count);
 	}
 
 	if (!str)

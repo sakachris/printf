@@ -19,6 +19,10 @@ int is_char(va_list print)
 		count = _putchar(c);
 		return (count);
 	}
+	else
+	{
+		return (1);
+	}
 
 	return (0);
 }
