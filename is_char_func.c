@@ -17,6 +17,8 @@ int is_char(va_list print)
 		num = _putchar(chars);
 		return (num);
 	}
+	else
+		return (1);
 
 	return (0);
 }

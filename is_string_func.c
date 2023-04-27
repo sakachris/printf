@@ -12,6 +12,11 @@ int is_string(va_list print)
 
 	str = va_arg(print, char *);
 
+	if (str == NULL)
+	{
+		num = _puts("(null)");
+		return (num);
+	}
 	if (!str)
 		return (-1);
 	else

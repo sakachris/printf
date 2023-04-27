@@ -8,14 +8,14 @@
 */
 int _printf(const char *format, ...)
 {
-	int b = 0;
-	int number = 0;
-	int output = 0;
+	int b = 0, number = 0, output = 0;
 	va_list list;
 	int (*function)(va_list);
 
 	va_start(list, format);
-	while (format[b])
+	if (format == NULL)
+		return (-1);
+	while (format[b] && format)
 	{
 		if (format[b] != '%')
 		{
@@ -37,13 +37,15 @@ int _printf(const char *format, ...)
 			}
 			if (format[b + 1] != '\0')
 			{
-				number = _putchar(format[b + 1]);
+				number = _putchar(format[b]);
 				output += number;
-				b = b + 2;
+				b++;
 				continue;
 			}
+			if (format[b + 1] == '\0')
+				return (-1);
 		}
 	}
-
+	va_end(list);
 	return (output);
 }
