@@ -19,7 +19,7 @@ int is_string(va_list print)
 	}
 	if (!str)
 		return (-1);
-	else
+	else if (!str)
 	{
 		num = _puts(str);
 		return (num);
